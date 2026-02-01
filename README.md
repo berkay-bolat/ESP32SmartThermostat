@@ -32,7 +32,9 @@ Central Unit (Receiver & Controller)
 
 INSTALLATION & SETUP
 
-Libraries: Install the following libraries via Arduino IDE Library Manager
+Arduino IDE: Arduino IDE is strongly recommended to connect your development boards and manage them effectively. 
+
+Libraries: Install the following libraries via Arduino IDE Library Manager.
     -WiFi
     -HTTPClient
     -BlynkSimpleEsp32
