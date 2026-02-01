@@ -20,17 +20,17 @@ HARDWARE REQUIREMENTS
 
 Room Unit (Transmitter & UI):
 
-    -ESP32 Development Board
-    -2.8" or 3.2" TFT LCD Display (ILI9341 Driver) & XPT2046 Touch Controller (Built-in with display)
-    -DHT22 Temperature & Humidity Sensor
-    -Li-Po Battery (Optional)
-    -Jumper Cables
+    ESP32 Development Board
+    2.8" or 3.2" TFT LCD Display (ILI9341 Driver) & XPT2046 Touch Controller (Built-in with display)
+    DHT22 Temperature & Humidity Sensor
+    Li-Po Battery (Optional)
+    Jumper Cables
 
 Central Unit (Receiver & Controller):
 
-    -ESP32 Development Board
-    -Relay Module (5V/3.3V trigger) * Connection to Boiler/Heater
-    -Jumper Cables
+    ESP32 Development Board
+    Relay Module (5V/3.3V trigger) * Connection to Boiler/Heater
+    Jumper Cables
 
 INSTALLATION & SETUP
 
@@ -38,30 +38,30 @@ Arduino IDE: Arduino IDE is strongly recommended to connect your development boa
 
 Libraries: Install the following libraries via Arduino IDE Library Manager:
 
-    -WiFi
-    -HTTPClient
-    -BlynkSimpleEsp32
-    -Adafruit_Sensor
-    -Adafruit_GFX
-    -Adafruit_ILI9341
-    -XPT2046_Touchscreen
-    -DHT
-    -ArduinoJson
-    -Preferences
-    -analogWrite
-    -esp_now
+    WiFi
+    HTTPClient
+    BlynkSimpleEsp32
+    Adafruit_Sensor
+    Adafruit_GFX
+    Adafruit_ILI9341
+    XPT2046_Touchscreen
+    DHT
+    ArduinoJson
+    Preferences
+    analogWrite
+    esp_now
 
 Configuration:
 
 Open RoomUnit.ino and CentralUnit.ino. Fill in your credentials in the lines marked below:
 
-    -#define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
-    -#define BLYNK_TEMPLATE_NAME "YOUR_BLYNK_TEMPLATE_NAME"
-    -const char BLYNK_AUTH_TOKEN[] = "YOUR_BLYNK_AUTH_TOKEN";
-    -const char* ssid = "YOUR_WIFI_SSID";
-    -const char* password = "YOUR_WIFI_PASSWORD";
-    -const char* apiKey = "YOUR_WEATHER_API_KEY";
-    -uint8_t receiverAddress[] = {0x??, 0x??, 0x??, 0x??, 0x??, 0x??};
+    #define BLYNK_TEMPLATE_ID "YOUR_BLYNK_TEMPLATE_ID"
+    #define BLYNK_TEMPLATE_NAME "YOUR_BLYNK_TEMPLATE_NAME"
+    const char BLYNK_AUTH_TOKEN[] = "YOUR_BLYNK_AUTH_TOKEN";
+    const char* ssid = "YOUR_WIFI_SSID";
+    const char* password = "YOUR_WIFI_PASSWORD";
+    const char* apiKey = "YOUR_WEATHER_API_KEY";
+    uint8_t receiverAddress[] = {0x??, 0x??, 0x??, 0x??, 0x??, 0x??};
 
 Note: You should create Blynk templates and arrange their dashboards and virtual data pins to use this system efficiently. Do not forget to set VPIN values in CentralUnit.ino and RoomUnit.ino accordingly.
 
